@@ -163,7 +163,7 @@ namespace RandM.RMLib
 
         public static IPAddress GetExternalIPv4ByHttp(string scheme)
         {
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls;
 
             using (RMWebClient WC = new RMWebClient())
             {

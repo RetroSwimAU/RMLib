@@ -526,7 +526,7 @@ namespace RandM.RMLib
                                 int oldTimeout = _Socket.ReceiveTimeout;
                                 _Socket.ReceiveTimeout = 10 * 1000; // 10 seconds to complete SSL handshake
                                 
-                                SSL.AuthenticateAsServer(_Certificate, false, SslProtocols.Tls | SslProtocols.Tls11 | SslProtocols.Tls12, false);
+                                SSL.AuthenticateAsServer(_Certificate, false, SslProtocols.Tls, false);
                                 
                                 _Socket.ReceiveTimeout = oldTimeout;
                             }
